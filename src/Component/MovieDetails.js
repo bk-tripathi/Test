@@ -9,7 +9,7 @@ function MovieDetails({items}) {
     <div className='flex flex-col gap-5'>
      {items &&
               items?.map((movie, index) => (
-                <li key={index}>
+                <li key={index} className="flex flex-col gap-5 ">
                   <div className="image ">
                     <img src={movie?.show?.image?.medium} />
                   </div>
@@ -21,6 +21,7 @@ function MovieDetails({items}) {
                       Runtime:{movie?.show?.runtime}minute 
                       Rating:{movie?.show?.rating?.average}
                      <p> Summary:{movie?.show?.summary}</p>
+
                     <Link to="/booking-form">
                       <button>Book Ticket </button>
                     </Link>
