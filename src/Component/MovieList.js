@@ -6,13 +6,12 @@ function MovieList({ items }) {
     <div className="flex flex-col gap-5">
       {items &&
         items?.map((movie, index) => (
-      
+          
+          <Link to='/movie-Details'>
             <li key={index} className="flex flex-row gap-5 hover:bg-slate-300 bg-slate-200 w-full " >
-              <Link to='/movie-Details'>
                 <div className='images'>
                   <img src={movie?.show?.image?.medium } alt='image not found' />
                 </div>
-              </Link>
               <div className="flex flex-col justify-center align-middle ">
               <span>
               Name: {`${movie?.show?.name}`}
@@ -25,6 +24,7 @@ function MovieList({ items }) {
               </span>
               </div>
             </li>
+              </Link>
           
         ))}
     </div>
